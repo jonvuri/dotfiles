@@ -1,0 +1,54 @@
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+
+# Nudge bindings
+bind h:alt nudge -10% +0
+bind j:alt nudge +0 +10%
+bind k:alt nudge +0 -10%
+bind l:alt nudge +10% +0
+
+# Push bindings
+bind h:alt,shift push left
+bind j:alt,shift push down
+bind k:alt,shift push up
+bind l:alt,shift push right
+
+# Resize bindings
+bind n:alt resize +10% +0 bottom-right
+bind m:alt resize +0 +10%
+bind ,:alt resize +0 +10% bottom-right
+bind .:alt resize +10% +0
+bind n:alt,shift resize -10% +0
+bind m:alt,shift resize +0 -10% bottom-right
+bind ,:alt,shift resize +0 -10%
+bind .:alt,shift resize -10% +0 bottom-right
+
+# Focus bindings
+bind a:alt focus left
+bind s:alt focus down
+bind w:alt focus up
+bind d:alt focus right
+
+# Tile bindings
+bind y:alt push left bar-resize:screenSizeX/2
+bind u:alt push down bar-resize:screenSizeY/2
+bind i:alt push up bar-resize:screenSizeY/2
+bind o:alt push right bar-resize:screenSizeX/2
+bind y:alt,shift move screenOriginX;windowTopLeftY screenSizeX;windowSizeY
+bind u:alt,shift move windowTopLeftX;screenOriginY windowSizeX;screenSizeY
+bind i:alt,shift move windowTopLeftX;screenOriginY windowSizeX;screenSizeY
+bind o:alt,shift move screenOriginX;windowTopLeftY screenSizeX;windowSizeY
+bind t:alt corner top-left resize:screenSizeX/2;screenSizeY/2
+bind g:alt corner bottom-left resize:screenSizeX/2;screenSizeY/2
+bind p:alt corner top-right resize:screenSizeX/2;screenSizeY/2
+bind ;:alt corner bottom-right resize:screenSizeX/2;screenSizeY/2
+bind f:alt corner top-left resize:screenSizeX;screenSizeY
+bind c:alt move screenSizeX/2-windowSizeX/2;screenSizeY/2-windowSizeY/2 windowSizeX;windowSizeY
+
+# Window hints
+bind z:alt hint
+

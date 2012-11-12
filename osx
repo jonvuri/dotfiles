@@ -1,0 +1,93 @@
+# Disable window animations and Get Info animations in Finder
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Show remaining battery time; hide percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Display ASCII control characters using caret notation in standard text views
+defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
+
+# Increase window resize speed for Cocoa applications
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Disable opening and closing window animations
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Show all filename extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Allow text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Display full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Disable the warning before emptying the Trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Remove the auto-hiding Dock delay
+defaults write com.apple.Dock autohide-delay -float 0
+
+# Remove the animation when hiding/showing the Dock (actually, make it fast. If you want to remove, use 0)
+defaults write com.apple.dock autohide-time-modifier -float 0.25
+
+# Enable highlight hover effect for the grid view of a stack (Dock)
+defaults write com.apple.dock mouse-over-hilte-stack -bool true
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Disable the Ping sidebar in iTunes
+defaults write com.apple.iTunes disablePingSidebar -bool true
+
+# Disable all the other Ping stuff in iTunes
+defaults write com.apple.iTunes disablePing -bool true
+
+# Make ⌘ + F focus the search input in iTunes
+defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# iTunes arrows link to library instead of store
+defaults write com.apple.iTunes invertStoreLinks -bool true
+
+# Keep playing QuickLook even when the icon is no longer selected
+defaults write com.apple.Finder AutoStopWhenSelectionChanges 0
+
+# Keep playing QuickLook even when scrolling away
+defaults write com.apple.Finder AutoStopWhenScrollingOffBounds 1
+
+# X-Ray QuickLook folders
+defaults write com.apple.Finder QLEnableXRayFolders 1
+
+# Finder path bar starts at $HOME
+defaults write com.apple.finder PathBarRootAtHome -bool true
+
+# Disable auto-termination of idle applications
+defaults write -g NSDisableAutomaticTermination -bool true
+
+# Disable notification center
+defaults write /System/Library/LaunchAgents/com.apple.notificationcenterui KeepAlive -bool false
